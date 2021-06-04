@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    app:cardBackgroundColor="#f0f0f0"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/rvRecetaImagen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_launcher_background"></ImageView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rvRecetaNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre de receta"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"></TextView>
+
+            <TextView
+                android:id="@+id/rvRecetaDescripcion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descripccion de la receta. no debe ser muy larga"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"></TextView>
+
+            <TextView
+                android:id="@+id/rvRecetaCategoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Categoria"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"></TextView>
+
+            <TextView
+                android:id="@+id/rvRecetaTiempoPreparacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="XX min de preparacion"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"></TextView>
+
+            <Button
+                android:id="@+id/rvRecetaInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Leer mas"
+                app:backgroundTint="#7CB342" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

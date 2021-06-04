@@ -1,0 +1,2 @@
+rootProject.name = "TP Lab5 - app de recetas"
+include ':app'
