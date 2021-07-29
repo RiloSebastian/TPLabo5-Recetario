@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_horizontal"
-    tools:context=".MainActivity">
+    tools:context=".ingredientesActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvListaRecetas"
+        android:id="@+id/rvIngredientes"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     </androidx.recyclerview.widget.RecyclerView>

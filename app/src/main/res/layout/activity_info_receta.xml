@@ -1,40 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_margin="15dp"
-    tools:context=".infoReceta">
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/infoRecetaNombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:text="Nombre de receta">
-    </TextView>
-    <TextView
-        android:id="@+id/infoRecetaDescripcion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:text="Descripcion de la receta. deberia ser relativamente corta">
-    </TextView>
 
-    <TextView
-        android:id="@+id/infoRecetaIngredientes"
-        android:layout_width="wrap_content"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/infoRecetaTabLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:text="esta es una lista de ingredientes \n ° se va a mostrar con una list view \n ° este textview es puramente descriptivo \n ° cada item va a tener un checkbox \n ° este checkbox indicara que ingredientes \n   tengo y cuales no">
-    </TextView>
-    <TextView
-        android:id="@+id/infoRecetaInstrucciones"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:text="Instrucciones de la receta. la api devuelve un texto por lo que se mostrara asi en lugar de mostrarse como una lista. para no perder tiempo en la modificacion de formato del texto">
-    </TextView>
+        android:background="#D0E1D0">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/infoRecetaTabGeneral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="general" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/infoRecetaTabIngredientes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ingredientes" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/infoRecetaTabInstrucciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="instrucciones" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/infoRecetaViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></androidx.viewpager2.widget.ViewPager2>
 </LinearLayout>

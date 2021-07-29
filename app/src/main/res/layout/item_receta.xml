@@ -4,6 +4,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="15dp"
+    android:layout_gravity="center_horizontal"
     app:cardBackgroundColor="#f0f0f0"
     app:cardCornerRadius="10dp"
     app:cardElevation="5dp"
@@ -12,19 +13,22 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
 
         <ImageView
             android:id="@+id/rvRecetaImagen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:src="@drawable/ic_launcher_background"></ImageView>
+            android:src="@drawable/ic_launcher_background"
+            android:contentDescription="Imagen de receta" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="15dp"
+            android:layout_marginBottom="10dp"
             android:orientation="vertical">
 
             <TextView
@@ -32,28 +36,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nombre de receta"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"></TextView>
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <TextView
                 android:id="@+id/rvRecetaDescripcion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Descripccion de la receta. no debe ser muy larga"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"></TextView>
-
-            <TextView
-                android:id="@+id/rvRecetaCategoria"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Categoria"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"></TextView>
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
             <TextView
                 android:id="@+id/rvRecetaTiempoPreparacion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="XX min de preparacion"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"></TextView>
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
             <Button
                 android:id="@+id/rvRecetaInfo"
@@ -61,8 +58,17 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="Leer mas"
-                app:backgroundTint="#7CB342" />
+                app:backgroundTint="#7CB342"/>
 
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/rvLabelMatchIngredientes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D0C362"
+            android:padding="10dp"
+            android:text="Some Matching Ingredients"
+            android:textColor="#685A00" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

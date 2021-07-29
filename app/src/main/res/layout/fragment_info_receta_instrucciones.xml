@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".infoReceta.InfoRecetaInstruccionesFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="#f0f0f0"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            tools:context=".infoRecetaActivity">
+
+            <TextView
+                android:id="@+id/infoRecetaLabelInstrucciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Instructions"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <ListView
+                android:id="@+id/infoRecetaInstrucciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>
